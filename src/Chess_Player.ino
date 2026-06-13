@@ -1,15 +1,20 @@
 #include "Board.h"
 #include "MoveGenerator.h"
-
-MoveGenerator moveGen;
+#include "DisplayManager.h"
 
 Board board;
+MoveGenerator moveGen;
+DisplayManager display;
 
 void setup() {
 
     Serial.begin(115200);
 
-    board.printBoard();
+    display.begin();
+
+    board.resetBoard();
+
+    display.drawBoard(board);
 }
 
 void loop() {
