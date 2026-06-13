@@ -1,4 +1,7 @@
 #include "Board.h"
+#include "MoveGenerator.h"
+
+MoveGenerator moveGen;
 
 Board board;
 
